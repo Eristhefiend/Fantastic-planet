@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STL Viewer Example</title>
+    <script src="stl_viewer.min.js"></script>
+    <link rel="stylesheet" href="stl_viewer.min.css">
+</head>
+<body>
+    <div id="stl-viewer-container"></div>
+
+    <script>
+        const container = document.getElementById('stl-viewer-container');
+
+        // Create an instance of the STLViewer class
+        const stlViewer = new STLViewer(container);
+
+        // Load your STL file (replace 'model.stl' with your actual file name)
+        stlViewer.load('model.stl', {
+            modelColor: '#aaaaaa', // Set the model color
+            backgroundColor: '#ffffff', // Set the background color
+        });
+
+        // Start the STL viewer
+        stlViewer.init();
+    </script>
+</body>
+</html>
