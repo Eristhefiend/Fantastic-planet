@@ -1,4 +1,4 @@
- body {
+body {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -16,3 +16,9 @@
     text-align: center;
     padding-top: 100px;
 }
+
+<!-- An aside -->
+<!-- This is for holding the 3D object -->
+<div id="aSide">    <model-viewer src="assets/nova toxaway.gltf" alt="nova" auto-rotate camera-controls ar ios-src="assets/nova toxaway.gltf"></model-viewer>
+
+</div>
