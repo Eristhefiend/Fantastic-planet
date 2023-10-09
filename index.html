@@ -45,26 +45,22 @@
             width: 100%;
             height: 400px;
         }
-
-        /* Media queries for mobile */
-        @media only screen and (max-width: 600px) {
-            h1 {
-                font-size: 24px;
-            }
-
-            #canvas-container {
-                height: 200px;
-            }
-        }
     </style>
 </head>
+
 <body>
     <div class="background"></div>
     <div class="container">
         <h1>Nova Toxaway, our future home</h1>
         <div id="canvas-container">
-        <img src="novasun.png" alt="nova next to sun">
-            <!-- 3D object -->
+        <div class="image-container">
+                <!-- This code block displays an image of a nova next to the sun and creates a map with a single rectangular area that represents the nova. When the user hovers over the area, the text "1.8 earths" will appear as a tooltip. -->
+                <img src="novasun.png" alt="nova next to sun" usemap="#novamap">
+                <map name="novamap">
+                    <area shape="rect" coords="0,0,100,100" alt="Nova" title="1.8 earths">
+                </map>
+        </div>
+        <!-- 3D object -->
             <model-viewer src="nova Toxaway.gltf" alt="nova" auto-rotate camera-controls ar ios-src="fanastic planet/nova Toxaway.gltf"></model-viewer>
         </div>
     </div>
@@ -72,4 +68,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-<a href="pages2.html" style="position: absolute; top: 0; right: 0; font-size: 24px; padding: 10px; color: white;">Learn more about our world</a>
+<button onclick="location.href='pages2.html'" style="position: absolute; top: 0; right: 0; font-size: 24px; padding: 10px; color: white; background-color: #2b8ed5; border: none; border-radius: 5px; cursor: pointer;">Learn more about our world</button>
